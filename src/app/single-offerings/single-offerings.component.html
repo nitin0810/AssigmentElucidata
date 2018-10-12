@@ -1,0 +1,14 @@
+<div style="margin-top: 5px;">
+  <h5 style="text-align: center;margin:40px; ">{{singleOfferings.description}}</h5>
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let singleOffering of singleOfferings.list;let i =index">
+    <app-single-offering [singleOffering]="singleOffering" [number]="i"></app-single-offering>
+      </div>
+    </div>
+
+  </div>
+
+</div>

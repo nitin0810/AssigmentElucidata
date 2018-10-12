@@ -83,7 +83,7 @@ export const offerings: Offering[] = [
             }
         ]
     }, {
-        name: 'Industries and Utilities',
+        name: 'Industries',
         subOfferings: [
             {
                 name: 'Chemical',
@@ -175,6 +175,7 @@ export const offerings: Offering[] = [
                 ]
             }
         ]
-    }
+    },
+
 ];
 

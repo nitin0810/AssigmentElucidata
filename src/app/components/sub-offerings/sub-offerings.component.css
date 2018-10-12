@@ -1,6 +1,6 @@
 
 
-.offering{
+.subOffering{
     margin: 20px;
     padding: 10px;
     height:80px;
@@ -16,20 +16,20 @@
     background-color: #5c4086 !important;
 }
 
-.cItem{
+.cItem2{
     text-align: center;
     background-color: #77678f;
 }
 
 .number{
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     padding: 4px;
     background: #fff;
     border: 2px solid #666;
     color: #666;
     position: relative;
-    left: 50%;
-    margin-left: -10%;
+    display: inline-block;
+    margin-right: 4px;
 }

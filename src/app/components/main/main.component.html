@@ -1,5 +1,11 @@
 
 <h4 style="text-align:center;text-decoration:underline">Our Offerings</h4>
 
+<div class="mainBg" >
 
-<app-offerings></app-offerings>
+  <app-offerings [offerings]="offerings" (selectOffering)="onOfferingSelect($event)"></app-offerings>
+  
+  <app-sub-offerings [subOfferings]="subOfferings" (selectSuboffering)="onSubOfferingSelect($event)"></app-sub-offerings>
+  
+  <app-single-offerings [singleOfferings]="singleOfferingsData"></app-single-offerings>
+</div>

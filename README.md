@@ -1,27 +1,29 @@
-# AssignmentED
+# AssignmentEluciData
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
-## Development server
+#Follow the following process to run the app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1: clone using git
+2: npm install
+3: ng serve --open
 
-## Code scaffolding
+#Architecture
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1: Root component has HeaderComponent and MainComponent as child components.
+2: Header is static for just showing.
+3: Main component is the one which handles core functionality.
 
-## Build
+It has 3 child components: OfferingsComponent, SubOfferingsComponent, SingleOfferingsComponent.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Main component has job of fetching the mock data from service and procviding it to child components.
 
-## Running unit tests
+Child Components renders the data throuh input binding and notifies
+main component about click event through output bindings
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4: Bootstrap has been used for styling and minimal custom styling has been done due to time constraints.
 
-## Running end-to-end tests
+There are other possible imrovements which could be done if more time would have given
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

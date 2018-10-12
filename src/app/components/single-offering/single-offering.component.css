@@ -1,0 +1,16 @@
+
+.number{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    border: 2px solid #666;
+    color: #666;
+    position: relative;
+    left: 50%;
+    margin-left: -10%;
+    text-align: center;
+    color: white;
+    background-color: #77678f;
+    top:-18px;
+}

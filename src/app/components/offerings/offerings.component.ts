@@ -1,33 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 
 import { Offering } from 'src/app/mock-data.model';
-import { MockDataService } from 'src/app/mock-data.service';
 
 @Component({
   selector: 'app-offerings',
   templateUrl: './offerings.component.html',
   styleUrls: ['./offerings.component.css']
 })
-export class OfferingsComponent implements OnInit {
+export class OfferingsComponent implements OnInit, OnChanges {
 
-  offerings: Array<Offering>;
+  @Input() offerings: Array<Offering>;
+  @Output() selectOffering: EventEmitter<number> = new EventEmitter(null);
 
-  constructor(
-    private mockDataService: MockDataService
-  ) { }
+  // stores the index of selected offering, used for styling
+  selected: number;
 
-  ngOnInit() {
-    this.fetchOfferings();
+  constructor() { }
+
+  ngOnInit() { }
+
+  ngOnChanges() {
+
+    // this lifecycle is executed only once at app starting since @Input() offerings is intialized by main component
+    // and then does not change
+    // Emit event to initialize the subofferings list with the subofferings of first offering
+    this.onOfferingClick(0);
   }
 
-  fetchOfferings() {
-
-    this.mockDataService.getOfferings()
-      .subscribe((res: Offering[]) => {
-        this.offerings = res;
-      }, (err: any) => {
-        console.log(err);
-      });
+  onOfferingClick(index: number) {
+    this.selected = index;
+    this.selectOffering.emit(index);
   }
-
 }
