@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { OfferingSingle } from '../mock-data.model';
+import { OfferingSingle } from 'src/app/mock-data.model';
 
 @Component({
   selector: 'app-single-offerings',
